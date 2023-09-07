@@ -1,8 +1,8 @@
 if (localStorage.getItem("status") == "true") {
   document.querySelector(".button-auth").style.display = "none";
-  document.querySelector(".button-cart").style.display = "block";
-  document.querySelector(".button-out").style.display = "block";
-  document.querySelector(".user-name").style.display = "block";
+  document.querySelector(".button-cart").style.display = "flex";
+  document.querySelector(".button-out").style.display = "flex";
+  document.querySelector(".user-name").style.display = "flex";
   document.querySelector(".user-name").textContent =
   localStorage.getItem("login");
 }
@@ -12,7 +12,7 @@ const btnCloseAuth = document.querySelector(".close-auth");
 const modal = document.querySelector(".modal-auth");
 
 btnAuth.addEventListener("click", () => {
-  modal.style.display = "block";
+  modal.style.display = "flex";
 });
 
 btnCloseAuth.addEventListener("click", () => {
@@ -48,9 +48,9 @@ document.querySelector(".button-login").addEventListener("click", (e) => {
 
   modal.style.display = "none";
   btnAuth.style.display = "none";
-  document.querySelector(".button-cart").style.display = "block";
-  document.querySelector(".button-out").style.display = "block";
-  document.querySelector(".user-name").style.display = "block";
+  document.querySelector(".button-cart").style.display = "flex";
+  document.querySelector(".button-out").style.display = "flex";
+  document.querySelector(".user-name").style.display = "flex";
   document.querySelector(".user-name").textContent =
   document.getElementById("login").value;
   document.getElementById("login").value = "";
@@ -58,7 +58,7 @@ document.querySelector(".button-login").addEventListener("click", (e) => {
 });
 
 document.querySelector(".button-out").addEventListener("click", () => {
-  btnAuth.style.display = "block";
+  btnAuth.style.display = "flex";
   document.querySelector(".button-cart").style.display = "none";
   document.querySelector(".button-out").style.display = "none";
   document.querySelector(".user-name").style.display = "none";
